@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - ns.yaml
 - roles.yaml
-#- person-apps.yaml
+- person-apps.yaml
