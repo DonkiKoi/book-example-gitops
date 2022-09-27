@@ -34,7 +34,6 @@ spec:
             secretKeyRef:
               key: database-name
               name: wanjaserver
-        image: ' '
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -77,6 +76,5 @@ spec:
         kind: ImageStreamTag
         name: postgresql:10-el8
         namespace: openshift
-      lastTriggeredImage: ""
     type: ImageChange
   - type: ConfigChange
