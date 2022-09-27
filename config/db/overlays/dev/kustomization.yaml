@@ -4,5 +4,5 @@ resources:
 - ../../base
 
 #namePrefix: dev-
-commonLabels:
-  variant: development
+#commonLabels:
+#  variant: development

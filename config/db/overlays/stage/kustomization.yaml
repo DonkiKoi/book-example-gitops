@@ -4,5 +4,5 @@ resources:
 - ../../base
 
 #namePrefix: stage-
-commonLabels:
-  variant: stage
+#commonLabels:
+#  variant: stage
