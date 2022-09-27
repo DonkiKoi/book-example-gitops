@@ -41,3 +41,47 @@ spec:
       prune: true
     syncOptions:
     - PruneLast=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: person-dev
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io  
+spec:
+  destination:
+    namespace: person-dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: config/person/overlays/dev
+    repoURL: https://github.com/DonkiKoi/book-example.git
+    targetRevision: gitops
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - PruneLast=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: person-dev
+  namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io  
+spec:
+  destination:
+    namespace: person-stage
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: config/person/overlays/stage
+    repoURL: https://github.com/DonkiKoi/book-example.git
+    targetRevision: gitops
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - PruneLast=true    
