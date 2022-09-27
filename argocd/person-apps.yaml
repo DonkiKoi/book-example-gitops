@@ -67,7 +67,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: person-dev
+  name: person-stage
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
@@ -84,4 +84,4 @@ spec:
     automated:
       prune: true
     syncOptions:
-    - PruneLast=true    
+    - PruneLast=true
