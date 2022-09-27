@@ -7,5 +7,5 @@ commonLabels:
 
 resources:
 - service.yaml
-#- secret.yaml
-#- deploymentconfig.yaml
+- secret.yaml
+- deploymentconfig.yaml
