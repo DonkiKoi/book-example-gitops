@@ -1,0 +1,75 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: argocd-access-role
+  namespace: person-dev
+rules:
+- apiGroups: ["*"]
+  resources: ["*"]
+  verbs: ["*"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: person-dev-edit-role-binding
+  namespace: person-dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: argocd-access-role
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: gitops
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: argocd-access-role
+  namespace: person-stage
+rules:
+- apiGroups: ["*"]
+  resources: ["*"]
+  verbs: ["*"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: person-stage-edit-role-binding
+  namespace: person-stage
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: argocd-access-role
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: gitops
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: person-dev-admin-role-binding
+  namespace: person-dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: gitops
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: person-stage-admin-role-binding
+  namespace: person-stage
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: openshift-gitops-argocd-application-controller
+  namespace: gitops

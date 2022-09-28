@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: postgresql-dev
-  namespace: openshift-gitops
+  namespace: gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
 spec:
@@ -25,7 +25,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: postgresql-stage
-  namespace: openshift-gitops
+  namespace: gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
 spec:
@@ -48,7 +48,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: person-dev
-  namespace: openshift-gitops
+  namespace: gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
 spec:
@@ -71,7 +71,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: person-stage
-  namespace: openshift-gitops
+  namespace: gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io  
 spec:
