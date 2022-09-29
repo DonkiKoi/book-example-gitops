@@ -45,5 +45,5 @@ Define a webhook secret in  and use it when configuring webhook in git repositoo
 ```yml
 stringData:
   # github webhook secret
-  webhook.github.secret:
+  webhook.github.secret: xxxxxxxxxxxxxxxxx
 ```

@@ -12,8 +12,8 @@ spec:
   project: default
   source:
     path: config/db/overlays/dev
-    repoURL: https://github.com/DonkiKoi/book-example.git
-    targetRevision: gitops
+    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
@@ -35,8 +35,8 @@ spec:
   project: default
   source:
     path: config/db/overlays/stage
-    repoURL: https://github.com/DonkiKoi/book-example.git
-    targetRevision: gitops
+    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
@@ -58,8 +58,8 @@ spec:
   project: default
   source:
     path: config/person/overlays/dev
-    repoURL: https://github.com/DonkiKoi/book-example.git
-    targetRevision: gitops
+    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
@@ -81,8 +81,8 @@ spec:
   project: default
   source:
     path: config/person/overlays/stage
-    repoURL: https://github.com/DonkiKoi/book-example.git
-    targetRevision: gitops
+    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
