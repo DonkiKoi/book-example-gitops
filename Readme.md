@@ -39,3 +39,11 @@ application.argoproj.io/person-stage created
 ```
 
 The web hook (for Git repo) is available under `<ARGOCD URL>/api/webhook`
+
+Define a webhook secret in  and use it when configuring webhook in git repositoory (https://argo-cd.readthedocs.io/en/stable/operator-manual/webhook/)
+
+```yml
+stringData:
+  # github webhook secret
+  webhook.github.secret:
+```
