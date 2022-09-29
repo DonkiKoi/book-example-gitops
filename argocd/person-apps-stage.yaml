@@ -1,29 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: postgresql-dev
-  namespace: gitops
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io  
-spec:
-  destination:
-    namespace: person-dev
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: config/db/overlays/dev
-    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - PruneLast=true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: postgresql-stage
   namespace: gitops
   finalizers:
@@ -35,29 +12,6 @@ spec:
   project: default
   source:
     path: config/db/overlays/stage
-    repoURL: https://github.com/DonkiKoi/book-example-gitops.git
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - PruneLast=true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: person-dev
-  namespace: gitops
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io  
-spec:
-  destination:
-    namespace: person-dev
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: config/person/overlays/dev
     repoURL: https://github.com/DonkiKoi/book-example-gitops.git
     targetRevision: HEAD
   syncPolicy:

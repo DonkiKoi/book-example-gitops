@@ -31,10 +31,12 @@ Login into ArgoCD UI, edit the _in-cluster_ in _Settings/Clusters_ and add `pers
 Deploy the applications
 
 ```bash
-$ oc apply -f argocd/person-apps.yaml
+$ oc apply -f argocd/person-apps-dev.yaml
 application.argoproj.io/postgresql-dev created
-application.argoproj.io/postgresql-stage created
 application.argoproj.io/person-dev created
+
+$ oc apply -f argocd/person-apps-stage.yaml
+application.argoproj.io/postgresql-stage created
 application.argoproj.io/person-stage created
 ```
 
