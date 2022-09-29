@@ -5,7 +5,7 @@ commonLabels:
 
 # in stage we have 2 replicas
 replicas:
-- count: 2
+- count: 4
   name: person-service
 
 # replace the image tag of the container with stage
