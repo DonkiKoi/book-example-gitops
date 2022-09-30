@@ -10,7 +10,7 @@ commonLabels:
 
 # replace the image tag of the container with latest
 images:
-- digest: sha256:1271e02d5c9e53f9f9afd1885fafdf305496e713b8cfc4a10af1ea170e473c83
+- digest: sha256:f8f8942504443e9126855a06b22c42f9ef2e7c57259de5522c11853a18575f89
   name: quay.io/donkikoi/person-service:latest
   newName: quay.io/donkikoi/person-service:latest
 
