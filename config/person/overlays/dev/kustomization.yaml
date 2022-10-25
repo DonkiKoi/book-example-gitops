@@ -13,6 +13,9 @@ images:
 - digest: sha256:16dc27d68371aeed760fbc6854b93271c1d51cc30a3492ba042bf6ac1257b0f9
   name: quay.io/donkikoi/person-service:latest
   newName: quay.io/donkikoi/person-service:latest
+- digest: sha256:f72f1a824f8b9898ca1fb2461ab856199f55927b7394ad7293a8457dbd2c78f9
+  name: quay.io/ksobkowiak/person-service:latest
+  newName: quay.io/ksobkowiak/person-service:latest
 
 # generate a configmap 
 configMapGenerator:
