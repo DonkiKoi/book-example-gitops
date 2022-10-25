@@ -21,7 +21,7 @@ spec:
         deployment: person-service
     spec:
       containers:
-        - image: quay.io/donkikoi/person-service:latest
+        - image: quay.io/ksobkowiak/person-service:latest
           imagePullPolicy: IfNotPresent
           name: person-service
           ports:
