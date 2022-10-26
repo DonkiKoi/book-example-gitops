@@ -10,9 +10,9 @@ commonLabels:
 
 # replace the image tag of the container with latest
 images:
-- digest: sha256:f99439ed255ec8e9cbb1c88ac2cb8fe12ec8b0601f44e953f72bd30f8a69d1ba
-  name: quay.io/ksobkowiak/person-service:latest
-  newName: quay.io/ksobkowiak/person-service:latest
+- digest: sha256:125498111c1628045f38cce6aac5a2689fe199c90d75d199e3a904de6c955503
+  name: quay.io/donkikoi/person-service:latest
+  newName: quay.io/donkikoi/person-service:latest
 
 # generate a configmap 
 configMapGenerator:
